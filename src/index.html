@@ -5,25 +5,39 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
-	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<title>Details</title>
+	<style>
+		body {
+			box-sizing: border-box;
+			min-width: 100vw;
+			min-height: 100vh;
+			margin: 0;
+			padding: 10vh 10vw;
+		}
+	</style>
 
 	<link rel="stylesheet" href="styles/main.min.css">
 </head>
 
 <body>
-	<div style="display: none;">
-		{% include 'img/sprite.svg' %}
-	</div>
 
-	<svg width="20" height="20" class="main-nav__ico">
-		<use xlink:href="#icon-geo"></use>
-	</svg>
+	<details class="details">
+		<summary class="details__summary">Подробнее</summary>
 
-	Далеко-далеко за словесными горами в стране, гласных и согласных живут
-	рыбные тексты. Парадигматическая переулка дал ведущими его семантика продолжил мир точках свой!
-	<img src="./img/1.jpg" alt="">
-	<script src="scripts/main.min.js"></script>
+		<div class="details__content">
+			Далеко-далеко за словесными горами в стране гласных и согласных, живут рыбные тексты. Назад маленькая знаках залетают свое ему это, рукописи скатился щеке маленький ты прямо возвращайся эта безопасную, гор образ там. Рукописи запятых журчит снова! Свой раз большого встретил послушавшись это великий свою рекламных имени, домах языком свое выйти пустился, которое переулка!
+		</div>
+	</details>
+
+	<details class="details" open>
+		<summary class="details__summary">Подробнее</summary>
+
+		<div class="details__content">
+			Далеко-далеко за словесными горами в стране гласных и согласных, живут рыбные тексты. Назад маленькая знаках залетают свое ему это, рукописи скатился щеке маленький ты прямо возвращайся эта безопасную, гор образ там. Рукописи запятых журчит снова! Свой раз большого встретил послушавшись это великий свою рекламных имени, домах языком свое выйти пустился, которое переулка!
+		</div>
+	</details>
+
+	<script src="scripts/main.js"></script>
 </body>
 
 </html>
