@@ -10,10 +10,15 @@ class Details {
 	}
 
 	initD() {
-		if (this._details.open)
+		if (!this._details.open)
 			this.closeD();
 		else
 			this.openD();
+
+		window.addEventListener('resize', () => {
+			if (this._details.open)
+				this._details.style.height = this._summary.offsetHeight + this._content.offsetHeight + 'px';
+		});
 
 		this._summary.addEventListener('click', (event) => {
 			event.preventDefault();
@@ -28,6 +33,7 @@ class Details {
 	closeD() {
 		this._details.style.height = this._summary.offsetHeight + 'px';
 		this._details.classList.remove('details--open');
+		this._details.classList.add('details--close');
 
 		setTimeout(() => {
 			this._details.open = false;
@@ -37,6 +43,7 @@ class Details {
 	openD() {
 		this._details.open = true;
 		this._details.classList.add('details--open');
+		this._details.classList.remove('details--close');
 		this._details.style.height = this._summary.offsetHeight + this._content.offsetHeight + 'px';
 	}
 
